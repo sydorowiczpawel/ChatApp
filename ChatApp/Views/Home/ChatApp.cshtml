@@ -1,0 +1,16 @@
+﻿@model UserModel
+
+<span id="user-login">@Model?.Login</span>
+
+<div id="chat-container" class="chat_container shadow p-3 mb-5 bg-body rounded">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8"><input id="chat-message" class="form-control" placeholder="... napisz coś"></div>
+            <div class="col-sm-4"><button type="button" id="send-btn" class="btn btn-outline-success">Wyślij</button></div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/site.js" asp-append-version="true"></script>
+}

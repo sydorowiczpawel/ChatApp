@@ -1,0 +1,20 @@
+﻿@model ChatApp.Models.UserModel
+
+@{
+    ViewBag.Title = "Strona Logowania";
+    Layout = "_Layout";
+}
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="text-danger font-weight-bold">
+        @Html.ValidationSummary()
+    </div>
+}
+<form asp-controller="Home" asp-action="Login" method="post">
+    <div class="mb-3">
+        <label class="form-label">Podaj nazwę użytkownika</label>
+        <input asp-for="Login" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Zaloguj</button>
+</form>
